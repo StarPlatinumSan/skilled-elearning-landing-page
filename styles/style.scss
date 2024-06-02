@@ -40,11 +40,21 @@ button {
 }
 
 picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow-x: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   
+   width: 100%;
+   height: auto;
+   img {
+    min-width: 35rem;
+    height: auto;
+   }
+}
+
+.heroImageDesktop {
+    display: none;
 }
 
 .items {
@@ -92,8 +102,7 @@ picture {
     }
 
     .heroImage {
-        min-width: 30rem;
-        object-fit: fill;
+       
     }
 }
 
@@ -102,6 +111,10 @@ picture {
     flex-direction: column;
     gap: 3rem;
     padding-bottom: 3rem;
+
+    & > * {
+        /* height: 16rem; */
+    }
     
     .checkOut {
         padding: 1.5em 1em 1.5em 1em;

@@ -1,137 +1,150 @@
 @media screen and (min-width: 768px) {
-    picture {
-        position: absolute;
-        right: -50%;
-        top: -150px;
-        z-index: -99;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-
     .items {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        width: 90%;
+        padding: 0;
+        margin: auto;
     }
 
     .hero {
+        display: flex;
         flex-direction: row;
-        position: relative;
+        margin: 5rem 0 5rem 0;
+        picture {
+            position: absolute;
+            right: -350px;
+            top: -70px;
+            z-index: -99;
 
-        .titleAndDescription {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            max-width: 50rem;
-            padding-top: 8rem;
-            padding-bottom: 5rem;
-            gap: 1rem;
-            max-width: 65%;
-            
-            .getStartedHero {
-                max-width: 15rem;
+            img {
+                min-width: 45rem;
             }
         }
 
-        .description {
-            font-size: 18px;
-            line-height: 1.5;
+        .titleAndDescription {
+            width: 50%;
         }
     }
 
     .gridCourses {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        row-gap: 3rem;
         column-gap: 1rem;
-        margin-top: 10rem;
+        row-gap: 3rem;
+        margin-bottom: 5rem;
 
         & > * {
-            box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.11);
-        }
-        
-
-        .course {
+            padding: 0;
             margin: 0;
-            padding: 3rem;
-            gap: 3rem;
-
-            .courseDescription {
-                line-height: 1.75;
-            }
+            width: 100%;
+            height: 100%;
         }
+    }
 
-        .checkOut {
-            padding-top: 5rem;
-        }
+    .footer {
+
     }
 }
 
-@media screen and (min-width: 900px) {
-    picture {
-        right: -45%;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .titleAndDescription {
-        max-width: 50%;
-    }
-
-    .hero .description {
-        font-size: 24px;
-    }
-
-}
-
-@media screen and (min-width: 1200px) {
-    picture {
-      top: -300px;
-    }
-
-    .items {
-        align-self: center;
-        justify-self: center;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
+@media screen and (min-width: 1000px) {
     .hero {
-        .titleAndDescription {
-            max-width: 50vw;
-        }
-
-
-        .description {
-            font-weight: 500;
-        }
+        margin: 10rem 0 10rem 0;
     }
 
     .gridCourses {
-        justify-content: center;
-        align-self: center;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        margin-top: 10rem;
+        grid-template-rows: 50% 50%;
 
-        & > * {
-           width: 35rem;
+        .courses {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
+    }
+}
 
+@media screen and (min-width: 1200px) {
+    .hero {
+        picture {
+            right: -450px;
+            top: -100px;
+        }
     }
 
-    
+    .titleAndDescription {
+
+        .title {
+            font-size: 4.5em;
+        }
+
+        .description {
+            font-size: 1.5em;
+            line-height: 1.5;
+        }
+    }
 }
 
 @media screen and (min-width: 1600px) {
+    picture {
+        display: none;
+    }
+
+    .items {
+        width: 60%;
+    }
 
     .hero {
-        .titleAndDescription {
-            max-width: 50rem;
+        margin: 15rem 0 15rem 0;
+    }
+
+    .heroImageDesktop {
+        display: block;
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        padding: 30rem;
+        background-image: url(../assets/image-hero-desktop.png);
+        background-position: left top;
+        background-size: 120%;
+        background-repeat: no-repeat;
+        z-index: -99;
+    }
+
+    .gridCourses {
+        align-self: center;
+        justify-self: center;
+        row-gap: 3rem;
+        column-gap: 2rem;
+        
+
+        .checkOut {
+            font-size: 2.5rem;
+        }
+
+        .course {
+            justify-content: space-around;
+        }
+
+        & > * {
+            height: 400px;
         }
     }
 
+    .footer {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
+
+@media screen and (min-width: 2100px) {
+    .heroImageDesktop {
+        top: -150px;
+        right: 0px;
+        padding: 35rem;
+        background-size: cover;
+    }
 }

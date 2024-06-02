@@ -40,7 +40,15 @@ picture {
   justify-content: center;
   align-items: center;
   width: 100%;
-  overflow-x: hidden;
+  height: auto;
+}
+picture img {
+  min-width: 35rem;
+  height: auto;
+}
+
+.heroImageDesktop {
+  display: none;
 }
 
 .items {
@@ -82,17 +90,14 @@ picture {
   text-align: center;
   background: linear-gradient(to top, #F02AA6, #FF6F48);
 }
-.hero .heroImage {
-  min-width: 30rem;
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
 .gridCourses {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   padding-bottom: 3rem;
+}
+.gridCourses > * {
+  /* height: 16rem; */
 }
 .gridCourses .checkOut {
   padding: 1.5em 1em 1.5em 1em;
@@ -159,107 +164,123 @@ picture {
 }
 
 @media screen and (min-width: 768px) {
-  picture {
-    position: absolute;
-    right: -50%;
-    top: -150px;
-    z-index: -99;
-  }
-  .items {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .hero {
-    flex-direction: row;
-    position: relative;
-  }
-  .hero .titleAndDescription {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 50rem;
-    padding-top: 8rem;
-    padding-bottom: 5rem;
-    gap: 1rem;
-    max-width: 65%;
-  }
-  .hero .titleAndDescription .getStartedHero {
-    max-width: 15rem;
-  }
-  .hero .description {
-    font-size: 18px;
-    line-height: 1.5;
-  }
-  .gridCourses {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    row-gap: 3rem;
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
-    margin-top: 10rem;
-  }
-  .gridCourses > * {
-    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.11);
-  }
-  .gridCourses .course {
-    margin: 0;
-    padding: 3rem;
-    gap: 3rem;
-  }
-  .gridCourses .course .courseDescription {
-    line-height: 1.75;
-  }
-  .gridCourses .checkOut {
-    padding-top: 5rem;
-  }
-}
-@media screen and (min-width: 900px) {
-  picture {
-    right: -45%;
-  }
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
-  .titleAndDescription {
-    max-width: 50%;
+  .items {
+    width: 90%;
+    padding: 0;
+    margin: auto;
   }
-  .hero .description {
-    font-size: 24px;
+  .hero {
+    display: flex;
+    flex-direction: row;
+    margin: 5rem 0 5rem 0;
+  }
+  .hero picture {
+    position: absolute;
+    right: -350px;
+    top: -70px;
+    z-index: -99;
+  }
+  .hero picture img {
+    min-width: 45rem;
+  }
+  .hero .titleAndDescription {
+    width: 50%;
+  }
+  .gridCourses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    row-gap: 3rem;
+    margin-bottom: 5rem;
+  }
+  .gridCourses > * {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .hero {
+    margin: 10rem 0 10rem 0;
+  }
+  .gridCourses {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+  }
+  .gridCourses .courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
-  picture {
-    top: -300px;
+  .hero picture {
+    right: -450px;
+    top: -100px;
   }
-  .items {
-    align-self: center;
-    justify-self: center;
-    margin-left: 5%;
-    margin-right: 5%;
+  .titleAndDescription .title {
+    font-size: 4.5em;
   }
-  .hero .titleAndDescription {
-    max-width: 50vw;
-  }
-  .hero .description {
-    font-weight: 500;
-  }
-  .gridCourses {
-    justify-content: center;
-    align-self: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-top: 10rem;
-  }
-  .gridCourses > * {
-    width: 35rem;
+  .titleAndDescription .description {
+    font-size: 1.5em;
+    line-height: 1.5;
   }
 }
 @media screen and (min-width: 1600px) {
-  .hero .titleAndDescription {
-    max-width: 50rem;
+  picture {
+    display: none;
+  }
+  .items {
+    width: 60%;
+  }
+  .hero {
+    margin: 15rem 0 15rem 0;
+  }
+  .heroImageDesktop {
+    display: block;
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    padding: 30rem;
+    background-image: url(../assets/image-hero-desktop.png);
+    background-position: left top;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    z-index: -99;
+  }
+  .gridCourses {
+    align-self: center;
+    justify-self: center;
+    row-gap: 3rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+  .gridCourses .checkOut {
+    font-size: 2.5rem;
+  }
+  .gridCourses .course {
+    justify-content: space-around;
+  }
+  .gridCourses > * {
+    height: 400px;
+  }
+  .footer {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+@media screen and (min-width: 2100px) {
+  .heroImageDesktop {
+    top: -150px;
+    right: 0px;
+    padding: 35rem;
+    background-size: cover;
   }
 }/*# sourceMappingURL=style.css.map */
