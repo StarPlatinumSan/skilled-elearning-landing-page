@@ -22,6 +22,7 @@
 
             img {
                 min-width: 45rem;
+                padding-top: 0;
             }
         }
 
@@ -46,7 +47,8 @@
     }
 
     .footer {
-
+        padding-left: calc(5% + 2rem);
+        padding-right: calc(5% + 2rem);
     }
 }
 

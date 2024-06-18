@@ -43,7 +43,8 @@ picture {
   height: auto;
 }
 picture img {
-  min-width: 35rem;
+  padding-top: 3rem;
+  min-width: 25rem;
   height: auto;
 }
 
@@ -149,8 +150,6 @@ picture img {
   padding: 3rem 2rem 3rem 2rem;
   width: 100%;
   height: 100%;
-  padding-left: calc(5% + 2rem);
-  padding-right: calc(5% + 2rem);
   display: flex;
   justify-content: space-between;
 }
@@ -158,7 +157,7 @@ picture img {
   color: #FFFFFF;
 }
 .footer .getStartedFooter {
-  padding: 1em 2em 1em 2em;
+  padding: 1em 1.25em 1em 1.25em;
   background: linear-gradient(to bottom, #4851FF, #F02AA6);
   color: #FFFFFF;
 }
@@ -187,6 +186,7 @@ picture img {
   }
   .hero picture img {
     min-width: 45rem;
+    padding-top: 0;
   }
   .hero .titleAndDescription {
     width: 50%;
@@ -204,6 +204,10 @@ picture img {
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+  .footer {
+    padding-left: calc(5% + 2rem);
+    padding-right: calc(5% + 2rem);
   }
 }
 @media screen and (min-width: 1000px) {
